@@ -9,70 +9,66 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  background-color: #f4f6f8;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+
+/* 全体を中央に寄せる箱 */
+.wrapper {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
   text-align: center;
 }
 
-/* 全体中央寄せ */
-.wrapper {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* ロゴ部分 */
+/* タイトル＋イラスト */
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 10px;
+  gap: 20px;
 }
 
-/* タイトル */
-.header h1 {
-  font-size: 28px;
-  margin: 0;
+/* タイトル部分 */
+.header-text {
+  text-align: left;
 }
 
-/* ロゴ画像 */
+/* イラスト */
 .header img {
-  height: 70px;
+  height: 80px;
 }
 
-/* サブテキスト */
-.subtitle {
-  margin-bottom: 20px;
-  color: #555;
-}
-
-/* メニュー */
+/* メニュー画像 */
 .menu {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  margin-top: 20px;
 }
 
 .menu img {
   width: 250px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin: 10px;
+  cursor: pointer;
   transition: 0.2s;
 }
 
 .menu img:hover {
-  transform: scale(1.03);
+  opacity: 0.8;
 }
 
 /* スマホ対応 */
 @media (max-width: 600px) {
+
   .header {
     flex-direction: column;
   }
 
+  .header-text {
+    text-align: center;
+  }
+
   .header img {
-    height: 100px;
+    height: 120px;
   }
 
   .menu img {
@@ -87,13 +83,15 @@ body {
 
 <div class="wrapper">
 
-  <!-- ロゴ風 -->
+  <!-- タイトル＋イラスト -->
   <div class="header">
-    <img src="manten_ramen.png">
-    <h1>サンニーノ メニュー</h1>
-  </div>
+    <div class="header-text">
+      <h1>サンニーノ メニュー</h1>
+      <p>画像をクリックすると拡大できます</p>
+    </div>
 
-  <p class="subtitle">画像をクリックすると拡大できます</p>
+    <img src="manten_ramen.png">
+  </div>
 
   <!-- メニュー -->
   <div class="menu">
