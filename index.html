@@ -6,19 +6,18 @@
 <title>サンニーノ メニュー</title>
 
 <style>
+/* 全体 */
 body {
-  font-family: sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: center;
+  font-family: sans-serif;
+  background: transparent; /* ← iframe用：背景消す */
 }
 
-/* 全体を中央に寄せる箱 */
+/* 中央寄せコンテナ */
 .wrapper {
   max-width: 800px;
-  width: 100%;
-  padding: 00px;
+  margin: 0 auto;
+  padding: 8px; /* ← 余白最小化 */
   text-align: center;
 }
 
@@ -27,36 +26,47 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px; /* ← 少し詰める */
 }
 
-/* タイトル部分 */
+/* タイトル */
 .header-text {
   text-align: left;
 }
 
-/* イラスト */
-.header img {
-  height: 80px;
+h1 {
+  margin: 4px 0;
+  font-size: 22px;
 }
 
-/* メニュー画像 */
+p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+/* イラスト */
+.header img {
+  height: 70px;
+}
+
+/* メニュー */
 .menu {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+/* 画像 */
 .menu img {
   width: 220px;
-  margin: 10px;
+  margin: 6px;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .menu img:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* スマホ対応 */
@@ -71,7 +81,7 @@ body {
   }
 
   .header img {
-    height: 120px;
+    height: 100px;
   }
 
   .menu img {
