@@ -12,21 +12,26 @@ body {
   background-color: #f9f9f9;
 }
 
-/* タイトル */
-h1 {
-  margin-bottom: 10px;
-}
-
-/* 横並び */
-.container {
+/* タイトル＋イラスト */
+.header {
   display: flex;
+  align-items: center;
   gap: 20px;
-  align-items: flex-start;
 }
 
-/* メニュー画像 */
+/* イラスト */
+.header img {
+  height: 80px;
+}
+
+/* メニュー */
+.menu {
+  margin-top: 20px;
+}
+
 .menu img {
   width: 250px;
+  margin-right: 10px;
   margin-bottom: 10px;
   cursor: pointer;
   transition: 0.2s;
@@ -36,26 +41,18 @@ h1 {
   opacity: 0.8;
 }
 
-/* イラスト */
-.illust img {
-  height: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
 /* スマホ対応 */
 @media (max-width: 600px) {
-  .container {
+  .header {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .header img {
+    height: 120px;
   }
 
   .menu img {
     width: 90%;
-  }
-
-  .illust img {
-    height: auto;
-    width: 70%;
   }
 }
 </style>
@@ -64,32 +61,30 @@ h1 {
 
 <body>
 
-<h1>サンニーノ メニュー</h1>
-<p>画像をクリックすると拡大できます</p>
-
-<div class="container">
-
-  <!-- 左：メニュー -->
-  <div class="menu">
-
-    <a href="menu1.jpg" target="_blank">
-      <img src="menu1_thumb.jpg">
-    </a>
-
-    <a href="menu2.jpg" target="_blank">
-      <img src="menu2_thumb.jpg">
-    </a>
-
-    <a href="menu3.jpg" target="_blank">
-      <img src="menu3_thumb.jpg">
-    </a>
-
+<!-- タイトル＋イラスト -->
+<div class="header">
+  <div>
+    <h1>サンニーノ メニュー</h1>
+    <p>画像をクリックすると拡大できます</p>
   </div>
 
-  <!-- 右：イラスト -->
-  <div class="illust">
-    <img src="manten_ramen.png">
-  </div>
+  <img src="manten_ramen.png">
+</div>
+
+<!-- メニュー -->
+<div class="menu">
+
+  <a href="menu1.jpg" target="_blank">
+    <img src="menu1_thumb.jpg">
+  </a>
+
+  <a href="menu2.jpg" target="_blank">
+    <img src="menu2_thumb.jpg">
+  </a>
+
+  <a href="menu3.jpg" target="_blank">
+    <img src="menu3_thumb.jpg">
+  </a>
 
 </div>
 
